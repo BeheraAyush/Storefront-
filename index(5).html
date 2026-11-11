@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fff8f0" />
+  <meta name="description" content="The Cake Business — freshly layered cakes, made for your sweetest moments. Explore flavours, sizes and custom cake options." />
+  <title>The Cake Business — A little joy, layer by layer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="announcement-bar">Baked fresh for the moments that matter <span>✳</span> Made with a little extra love</div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="The Cake Business home">
+      <span class="brand-mark" aria-hidden="true"><i></i><b></b></span>
+      <span>the cake <em>business</em></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#journey">Our process</a>
+      <a href="#menu">The menu</a>
+      <a href="#customise">Build your cake</a>
+      <a href="#about">Our story</a>
+    </nav>
+    <a class="header-cta" href="#customise">Make it yours <span>↗</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> GOOD THINGS TAKE LAYERS</p>
+        <h1>A little joy,<br /><i>layer by layer.</i></h1>
+        <p class="hero-description">Thoughtful flavours, soft sponge, clouds of cream. Find the cake that makes your next little celebration feel like a big one.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#menu">Explore the menu <span>↗</span></a>
+          <a class="text-link" href="#journey"><span class="play-icon">↓</span> See how it’s made</a>
+        </div>
+        <div class="hero-note"><span class="note-star">✳</span><span>Made to order · Customisable · Always worth a slice</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a decorated pink layer cake">
+        <div class="hero-art-sun"></div>
+        <div class="hero-orbit orbit-one"></div>
+        <div class="hero-orbit orbit-two"></div>
+        <div class="hero-cake-shadow"></div>
+        <div class="hero-cake">
+          <div class="hero-cake-top"></div>
+          <div class="hero-cake-body"><span class="cake-drip drip-a"></span><span class="cake-drip drip-b"></span><span class="cake-drip drip-c"></span><span class="cake-drip drip-d"></span><span class="cake-drip drip-e"></span></div>
+          <div class="hero-cake-filling"></div>
+          <div class="hero-cake-base"></div>
+          <div class="hero-berries"><i></i><i></i><i></i></div>
+          <div class="hero-flower flower-one">✿</div><div class="hero-flower flower-two">✿</div>
+        </div>
+        <div class="art-sticker sticker-one">baked<br />with love</div>
+        <div class="art-sticker sticker-two">100%<br />happy</div>
+        <span class="art-spark spark-a">✳</span><span class="art-spark spark-b">✦</span><span class="art-spark spark-c">✧</span>
+      </div>
+      <div class="hero-bottomline"><span>01 — THE GOOD STUFF</span><span>SCROLL TO GET A LITTLE CLOSER ↓</span></div>
+    </section>
+
+    <section class="journey-intro section-pad" aria-label="Cake making introduction">
+      <p class="eyebrow">A SMALL LOOK BEHIND THE WHISK</p>
+      <h2>From the first layer<br />to the <i>last little detail.</i></h2>
+      <p>Keep scrolling. We’ll make something lovely together.</p>
+    </section>
+
+    <section class="bake-journey" id="journey" aria-label="Scroll to watch a cake being assembled">
+      <div class="journey-sticky">
+        <div class="journey-topline"><span>THE MAKING OF A LITTLE MAGIC</span><span class="live-label"><i></i> IN THE WORKSHOP</span></div>
+        <div class="journey-backdrop-shape shape-left"></div>
+        <div class="journey-backdrop-shape shape-right"></div>
+        <canvas id="cake-canvas" aria-label="A 3D cake is assembled as you scroll"></canvas>
+        <div class="cake-fallback" aria-hidden="true"><div class="fallback-plate"></div><div class="fallback-cake"></div></div>
+        <div class="journey-copy" aria-live="polite">
+          <p class="journey-step" id="journey-step">01 / THE FOUNDATION</p>
+          <h2 id="journey-title">Start with<br /><i>something soft.</i></h2>
+          <p id="journey-description">A tender, golden sponge. The kind that makes you sneak a little corner before it’s even dressed.</p>
+        </div>
+        <div class="journey-progress-wrap">
+          <div class="journey-progress-head"><span>YOUR CAKE, COMING TO LIFE</span><strong id="journey-percent">0%</strong></div>
+          <div class="journey-progress-track"><span id="journey-progress"></span></div>
+          <div class="journey-stages" aria-hidden="true"><span class="active">Sponge</span><span>Filling</span><span>Layers</span><span>Frosting</span><span>Finishing</span></div>
+        </div>
+        <div class="scroll-hint"><span class="scroll-mouse"><i></i></span> KEEP SCROLLING</div>
+      </div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE LINE-UP</p><h2>Pick your <i>happy place.</i></h2></div>
+        <p class="section-intro">A few crowd favourites to get you started. Every cake is made fresh to order, with room for your own little twist.</p>
+      </div>
+      <div class="menu-grid">
+        <article class="menu-card card-chocolate">
+          <div class="menu-visual visual-chocolate"><span class="visual-label">THE CLASSIC</span><div class="mini-cake"><i></i><b></b></div><span class="visual-spark">✳</span></div>
+          <div class="menu-card-info"><div><h3>Belgian Chocolate</h3><p>Deep cocoa · silky ganache</p></div><strong>₹649<span> / ½ kg</span></strong></div>
+        </article>
+        <article class="menu-card card-rasmalai">
+          <div class="menu-visual visual-rasmalai"><span class="visual-label">A LITTLE DESI</span><div class="mini-cake"><i></i><b></b></div><span class="visual-spark">✿</span></div>
+          <div class="menu-card-info"><div><h3>Rasmalai Royale</h3><p>Cardamom · saffron · cream</p></div><strong>₹799<span> / ½ kg</span></strong></div>
+        </article>
+        <article class="menu-card card-strawberry">
+          <div class="menu-visual visual-strawberry"><span class="visual-label">THE SWEET ONE</span><div class="mini-cake"><i></i><b></b></div><span class="visual-spark">✦</span></div>
+          <div class="menu-card-info"><div><h3>Strawberry Cloud</h3><p>Berry compote · vanilla cream</p></div><strong>₹699<span> / ½ kg</span></strong></div>
+        </article>
+        <article class="menu-card card-biscoff">
+          <div class="menu-visual visual-biscoff"><span class="visual-label">THE CROWD PLEASER</span><div class="mini-cake"><i></i><b></b></div><span class="visual-spark">✳</span></div>
+          <div class="menu-card-info"><div><h3>Biscoff Dream</h3><p>Cookie butter · caramel crunch</p></div><strong>₹899<span> / ½ kg</span></strong></div>
+        </article>
+      </div>
+      <p class="price-note">Menu prices are sample starting prices for this demo website. Final pricing can vary by design, delivery and customisation.</p>
+    </section>
+
+    <section class="customise-section section-pad" id="customise">
+      <div class="customise-heading"><p class="eyebrow">YOUR CAKE, YOUR RULES</p><h2>Let’s make it <i>yours.</i></h2><p>Choose a flavour, pick your size, add the little extras. We’ll keep a running estimate for you.</p></div>
+      <div class="builder-layout">
+        <div class="builder-options">
+          <div class="builder-step">
+            <div class="builder-step-title"><span>01</span><div><h3>Choose your flavour</h3><p>What are we craving?</p></div></div>
+            <div class="choice-grid flavour-choices" role="group" aria-label="Cake flavour">
+              <button class="choice-card selected" type="button" data-flavour="chocolate"><span class="swatch swatch-chocolate"></span><span>Belgian Chocolate</span><small>₹649 base</small></button>
+              <button class="choice-card" type="button" data-flavour="rasmalai"><span class="swatch swatch-rasmalai"></span><span>Rasmalai Royale</span><small>₹799 base</small></button>
+              <button class="choice-card" type="button" data-flavour="strawberry"><span class="swatch swatch-strawberry"></span><span>Strawberry Cloud</span><small>₹699 base</small></button>
+              <button class="choice-card" type="button" data-flavour="biscoff"><span class="swatch swatch-biscoff"></span><span>Biscoff Dream</span><small>₹899 base</small></button>
+            </div>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-title"><span>02</span><div><h3>Pick your size</h3><p>More people, more cake.</p></div></div>
+            <div class="size-choices" role="group" aria-label="Cake size">
+              <button class="size-choice selected" type="button" data-size="0.5" data-extra="0"><strong>½ kg</strong><small>4–6 slices</small></button>
+              <button class="size-choice" type="button" data-size="1" data-extra="550"><strong>1 kg</strong><small>8–12 slices</small></button>
+              <button class="size-choice" type="button" data-size="1.5" data-extra="1050"><strong>1.5 kg</strong><small>14–18 slices</small></button>
+              <button class="size-choice" type="button" data-size="2" data-extra="1650"><strong>2 kg</strong><small>20–24 slices</small></button>
+            </div>
+          </div>
+          <div class="builder-step">
+            <div class="builder-step-title"><span>03</span><div><h3>Add your finishing touches</h3><p>The details make the celebration.</p></div></div>
+            <div class="extra-list">
+              <label class="extra-option"><span><b>Chocolate ganache finish</b><small>Extra rich, extra glossy</small></span><span class="extra-price">+₹120 <input type="checkbox" data-extra-price="120" /></span></label>
+              <label class="extra-option"><span><b>Birthday topper</b><small>A little something on top</small></span><span class="extra-price">+₹100 <input type="checkbox" data-extra-price="100" /></span></label>
+              <label class="extra-option"><span><b>Personalised message plaque</b><small>Your words, on the cake</small></span><span class="extra-price">+₹80 <input type="checkbox" data-extra-price="80" /></span></label>
+            </div>
+          </div>
+        </div>
+        <aside class="order-card">
+          <div class="order-card-top"><span>YOUR LITTLE MASTERPIECE</span><span class="order-star">✳</span></div>
+          <div class="order-preview"><div class="preview-plate"></div><div class="preview-cake" id="preview-cake"><span></span><i></i></div><div class="preview-berry berry-one"></div><div class="preview-berry berry-two"></div><div class="preview-berry berry-three"></div></div>
+          <p class="preview-caption" id="preview-flavour">Belgian Chocolate · ½ kg</p>
+          <div class="order-line"><span>Flavour</span><b id="summary-flavour">Belgian Chocolate</b></div>
+          <div class="order-line"><span>Size</span><b id="summary-size">½ kg</b></div>
+          <div class="order-line"><span>Extras</span><b id="summary-extras">None yet</b></div>
+          <div class="order-total"><span>Estimated total</span><strong id="summary-total">₹649</strong></div>
+          <p class="order-disclaimer">Final quote is confirmed after design and delivery details.</p>
+          <a class="button button-dark button-full" href="#order-form">Continue to order <span>↘</span></a>
+        </aside>
+      </div>
+
+      <form class="order-form" id="order-form">
+        <div class="form-heading"><p class="eyebrow">ONE LAST THING</p><h3>Where should the cake <i>find you?</i></h3></div>
+        <div class="form-grid">
+          <label>Your name<input id="customer-name" name="name" type="text" placeholder="Your name" required /></label>
+          <label>Phone number<input id="customer-phone" name="phone" type="tel" inputmode="tel" placeholder="Your contact number" required /></label>
+          <label>Celebration date<input id="event-date" name="date" type="date" required /></label>
+          <label>Delivery area<input id="delivery-area" name="area" type="text" placeholder="Area / city" required /></label>
+          <label class="form-wide">Any message or design idea?<textarea id="order-note" name="note" rows="3" placeholder="A colour palette, a birthday message, or just the vibe…"></textarea></label>
+        </div>
+        <div class="form-bottom"><p>We’ll use these details to prepare your order request. No payment is taken on this demo page.</p><button class="button button-dark" type="submit">Prepare my order <span>↗</span></button></div>
+        <div class="order-output" id="order-output" hidden>
+          <p class="output-title">Your order note is ready</p>
+          <textarea id="order-message" rows="7" readonly aria-label="Order summary"></textarea>
+          <div class="output-actions"><button class="button button-outline" type="button" id="copy-order">Copy order details</button><span id="copy-status" role="status"></span></div>
+          <p class="setup-note" id="setup-note">To send orders directly to WhatsApp, add your bakery number in <code>main.js</code> (WHATSAPP_NUMBER).</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="about-section section-pad" id="about">
+      <div class="about-seal"><span>BAKED</span><strong>✿</strong><span>WITH LOVE</span></div>
+      <div class="about-copy"><p class="eyebrow">A NOTE FROM OUR KITCHEN</p><h2>Not just dessert.<br /><i>A little centrepiece.</i></h2><p>Some moments deserve more than a candle and a quick wish. We make cakes for the long hugs, the loud laughs, the small wins and the birthdays you’ve been counting down to.</p><a class="text-link" href="#customise">Make a cake with us <span>↗</span></a></div>
+      <div class="about-side-note">SWEET MOMENTS<br />ARE MADE HERE <span>✳</span></div>
+    </section>
+
+    <section class="closing-cta section-pad"><p class="eyebrow">THE NEXT SLICE IS YOURS</p><h2>Something sweet<br /><i>is around the corner.</i></h2><a class="button button-light" href="#customise">Build your cake <span>↗</span></a></section>
+  </main>
+
+  <footer class="site-footer"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><b></b></span><span>the cake <em>business</em></span></a><p>Made with sweetness, served with a smile.</p><div><a href="#menu">Menu</a><a href="#customise">Custom cakes</a><a href="#top">Back to top ↑</a></div><small>© <span id="year"></span> The Cake Business. Sample website concept.</small></footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="main.js"></script>
+</body>
+</html>
